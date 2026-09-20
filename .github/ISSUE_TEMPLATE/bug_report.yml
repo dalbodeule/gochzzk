@@ -1,0 +1,42 @@
+name: 버그 제보
+description: 재현 가능한 gochzzk 문제를 알려주세요.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: 민감한 토큰, Client Secret, Session URL은 반드시 제거해 주세요.
+  - type: input
+    id: version
+    attributes:
+      label: gochzzk 버전
+      placeholder: v0.1.0 또는 commit SHA
+    validations:
+      required: true
+  - type: input
+    id: go-version
+    attributes:
+      label: Go 버전
+      placeholder: go1.26.6
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 문제 설명
+      description: 기대한 동작과 실제 동작을 설명해 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 재현 방법
+      description: 최소 재현 코드와 실행 순서를 작성해 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 로그
+      description: 민감정보를 제거한 오류와 로그를 붙여 넣어 주세요.
+      render: shell
